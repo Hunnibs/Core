@@ -6,7 +6,7 @@ public class Order {
     private int price;
     private int discount;
 
-    private Order(Long memberId, String itemName, int price, int discount){
+    public Order(Long memberId, String itemName, int price, int discount){
         this.memberId = memberId;
         this.itemName = itemName;
         this.price = price;
