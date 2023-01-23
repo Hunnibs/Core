@@ -8,7 +8,11 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
-    MemberService memberService = new MemberServiceImpl();
+    MemberService memberService;
+
+    public MemberServiceTest(MemberService memberService) {
+        this.memberService = memberService;
+    }
 
     @Test
     void join(){

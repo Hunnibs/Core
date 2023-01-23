@@ -11,8 +11,13 @@ import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class OrderServiceTest {
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    MemberService memberService;
+    OrderService orderService;
+
+    public OrderServiceTest(MemberService memberService, OrderService orderService) {
+        this.memberService = memberService;
+        this.orderService = orderService;
+    }
 
     @Test
     void CreateOrder(){
