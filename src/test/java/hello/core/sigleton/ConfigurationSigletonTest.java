@@ -27,7 +27,7 @@ public class ConfigurationSigletonTest {
         System.out.println("memberRepository2 = " + memberRepository2);
         System.out.println("memberRepository = " + memberRepository);
 
-        assertThat(memberRepository1).isEqualTo(memberRepository);
-        assertThat(memberRepository2).isEqualTo(memberRepository);
+        assertThat(memberRepository1).isSameAs(memberRepository);
+        assertThat(memberRepository2).isSameAs(memberRepository);
     }
 }

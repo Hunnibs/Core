@@ -11,22 +11,22 @@ import hello.core.order.OrderServiceImpl;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-//@Configuration
+@Configuration
 public class AppConfig {
     @Bean
     public MemberService memberService(){
-        return new MemberServiceImpl(MemberRepository());
+        return new MemberServiceImpl(memberRepository());
     }
     @Bean
-    public MemberRepository MemberRepository() {
+    public MemberRepository memberRepository() {
         return new MemoryMemberRepository();
     }
     @Bean
     public OrderService orderService(){
-        return new OrderServiceImpl(MemberRepository(), DiscountPolicy());
+        return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
     @Bean
-    public DiscountPolicy DiscountPolicy() {
+    public DiscountPolicy discountPolicy() {
         return new RateDiscountPolicy();
     }
 }
