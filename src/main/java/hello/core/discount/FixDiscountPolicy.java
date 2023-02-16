@@ -3,7 +3,7 @@ package hello.core.discount;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import org.springframework.stereotype.Component;
-
+@Component
 public class FixDiscountPolicy implements DiscountPolicy{
     private int FixDiscount = 1000; // 고정 할인 금액: 1000원
 
